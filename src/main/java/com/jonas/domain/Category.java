@@ -27,7 +27,7 @@ public class Category implements Serializable {
     private String name;
     private String description;
 
-    @OneToMany(mappedBy = "categoria") //Anotacao para associacao
+    @OneToMany(mappedBy = "category") //Anotacao para associacao
     private List<Book> books = new ArrayList<>();
 
     //COSNTRUCTOR

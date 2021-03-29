@@ -9,8 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotEmpty;
-import org.hibernate.validator.constraints.Length;
 
 /**
  *
@@ -28,20 +26,20 @@ public class Book implements Serializable {
 
     @JsonIgnore
     @ManyToOne //Anotacao para associacao 
-    @JoinColumn(name = "categoria_id")
-    private Category categories;
+    @JoinColumn(name = "category_id")
+    private Category category;
 
     //COSNTRUCTOR
     public Book() {
     }
 
     //COSNTRUCTOR
-    public Book(Integer id, String title, String authorName, String text, Category categories) {
+    public Book(Integer id, String title, String authorName, String text, Category category) {
         this.id = id;
         this.title = title;
         this.authorName = authorName;
         this.text = text;
-        this.categories = categories;
+        this.category = category;
     }
 
     //EQUALS AND HASHCODE
@@ -103,12 +101,12 @@ public class Book implements Serializable {
         this.text = text;
     }
 
-    public Category getCategories() {
-        return categories;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategories(Category categories) {
-        this.categories = categories;
+    public void setCategory(Category categories) {
+        this.category = categories;
     }
 
 }
