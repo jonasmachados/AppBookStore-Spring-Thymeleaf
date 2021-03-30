@@ -24,6 +24,6 @@ public class CategoryResource {
     public String findAllObject(Model model) {
         List<Category> list = service.findAll();
         model.addAttribute("categories", list);
-        return "categories";
+        return "category/categories";
     }
 }
