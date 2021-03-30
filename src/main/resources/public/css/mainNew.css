@@ -1,0 +1,45 @@
+.mainNew{
+
+}
+.wrapperMain{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    height: 86vh;
+}
+.boxMenu{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-color: #696969;
+}
+.boxContents{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background-color: #BEBEBE;
+}
+
+.listMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: .5em;
+    background-color: #696969;
+}
+.pMain{
+    padding-right: 1rem;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    padding-top: 1em;
+    padding-left: .5em;
+}
+.bookIconButton{
+    height: 1.5em;
+    width: 2em;
+}
+
+@media(max-width:900px){
+    .wrapperMain{
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+}

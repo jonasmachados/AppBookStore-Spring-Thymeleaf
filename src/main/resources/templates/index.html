@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    </head>
+
+    <body>
+        <div layout:fragment="content">
+            <div class="wrapperMain">
+                <div class="Box boxMenu">
+                    <ul>
+                        <li>
+                            <a class="listMenu" th:href="@{//}">
+                                <img class="bookIconButton"src="img/home.png" alt="book-Icon"> 
+                                <p class="pMain">Home</p>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="listMenu" th:href="@{//}" >
+                                <img class="bookIconButton"src="img/category.png" alt="book-Icon">
+                                <p class="pMain">Category</p>
+                            </a>
+                        </li>
+                    </ul>  
+                </div>
+
+                <div class="Box boxContents">
+                    <p></p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

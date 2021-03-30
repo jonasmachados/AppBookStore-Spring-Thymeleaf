@@ -1,0 +1,19 @@
+.footer{
+	position: fixed;
+	bottom: 0;
+	justify-content: flex-end;
+	background-color: #000000;
+	width: 100%;
+
+}
+.pFooter{
+	display: inline;
+ 	float: right;
+ 	padding-right: 3%;
+	padding-top: .5em;
+	padding-bottom: .8em;
+	color: #FFFFFF;;
+	font-size: .8em;
+
+	
+}
