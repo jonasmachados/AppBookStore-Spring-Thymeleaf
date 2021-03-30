@@ -9,8 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.NotEmpty;
-import org.hibernate.validator.constraints.Length;
 
 /**
  *
@@ -76,14 +74,6 @@ public class Category implements Serializable {
         this.id = id;
     }
 
-    public String getNome() {
-        return name;
-    }
-
-    public void setNome(String name) {
-        this.name = name;
-    }
-
     public String getDescricao() {
         return description;
     }
@@ -99,5 +89,22 @@ public class Category implements Serializable {
     public void setBooks(List<Book> books) {
         this.books = books;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
 
 }
