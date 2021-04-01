@@ -14,16 +14,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Jonas, created 29/03/2021
  */
 @Controller
-@RequestMapping(value = "/categories")
+@RequestMapping(value = "/")
 public class CategoryResource {
 
     @Autowired
     private CategoryService service;
 
-    @GetMapping
-    public String findAllObject(Model model) {
-        List<Category> list = service.findAll();
+    @RequestMapping(value = "/categories")
+    public String findAllCategory(Model model) {
+        List<Category> list = service.findAllCategory();
         model.addAttribute("categories", list);
-        return "category/categories";
+        return "category/list-category";
     }
 }
