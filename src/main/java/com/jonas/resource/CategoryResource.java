@@ -48,4 +48,11 @@ public class CategoryResource {
         service.createOrUpdateCategory(category);
         return "redirect:/categories"; //REDIRECT: back to previous HTML.
     }
+
+    @RequestMapping(path = "/delete/{id}")
+    public String deleteCategoryById(Model model, @PathVariable("id") Integer id)
+            throws RecordNotFoundException {
+        service.deleteCategoryById(id);
+        return "redirect:/categories";
+    }
 }

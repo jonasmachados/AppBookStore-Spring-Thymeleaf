@@ -28,8 +28,8 @@ public class CategoryService {
             return new ArrayList<Category>();
         }
     }
-    
-     public Category getCategoryById(Integer id) throws RecordNotFoundException {
+
+    public Category getCategoryById(Integer id) throws RecordNotFoundException {
         Optional<Category> category = repository.findById(id);
 
         if (category.isPresent()) {
@@ -50,7 +50,7 @@ public class CategoryService {
             if (category.isPresent()) {
                 Category newCategory = category.get();
                 newCategory.setName(entity.getName());
-                newCategory.setDescription(entity.getDescription()); 
+                newCategory.setDescription(entity.getDescription());
 
                 newCategory = repository.save(newCategory);
 
@@ -60,6 +60,16 @@ public class CategoryService {
 
                 return entity;
             }
+        }
+    }
+
+    public void deleteCategoryById(Integer id) throws RecordNotFoundException {
+        Optional<Category> category = repository.findById(id);
+
+        if (category.isPresent()) {
+            repository.deleteById(id);
+        } else {
+            throw new RecordNotFoundException("No category record exist for given id");
         }
     }
 
