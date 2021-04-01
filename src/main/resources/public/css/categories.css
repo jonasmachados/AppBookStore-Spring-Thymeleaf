@@ -1,10 +1,14 @@
 .h2Categories{
     size: 1.5em;
 }
-.th{
+.thTable{
     background-color: #000000;
     color: #FFFFFF;
     font-size: 1.2em;
     text-align: center;
+}
+.divBt{
+     padding-top: 5em;
+     padding-bottom: 1em;
 }
 
