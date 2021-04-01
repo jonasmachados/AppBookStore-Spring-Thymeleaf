@@ -1,5 +1,6 @@
 .h2Categories{
     size: 1.5em;
+    color: #FFFFFF;
 }
 .thTable{
     background-color: #000000;
@@ -9,7 +10,7 @@
 }
 .divBt{
     padding-top: 5em;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
 }
 .boxPrincipal{
     display: grid;
@@ -31,13 +32,14 @@
 }
 .h3Categories{
     padding-top: 5em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     size: 1.5em;
     text-align: center;
+    color: #FFFFFF;
 
 }
 .form{
-    height: 2em;
+    height: 4em;
     width: 30em;
     margin-top: 1em;
     border-radius:5px;
@@ -45,6 +47,7 @@
     border-color: #696969;
     box-shadow: 2px 2px 2px 1px #696969;
     padding-left: 5%; 
+    font-size: 1em;
 }
 .btn{
     margin-top: 2em;
