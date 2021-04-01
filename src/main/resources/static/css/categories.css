@@ -1,0 +1,52 @@
+.h2Categories{
+    size: 1.5em;
+}
+.thTable{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    text-align: center;
+}
+.divBt{
+    padding-top: 5em;
+    padding-bottom: 1em;
+}
+.boxPrincipal{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.boxLogin{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top:solid .1em;
+    border-bottom:solid .1em;
+    border-color: #696969;
+    height: 20em;
+    width: 40em;
+}
+.h3Categories{
+    padding-top: 5em;
+    padding-bottom: 2em;
+    size: 1.5em;
+    text-align: center;
+
+}
+.form{
+    height: 2em;
+    width: 30em;
+    margin-top: 1em;
+    border-radius:5px;
+    border:solid .1em;
+    border-color: #696969;
+    box-shadow: 2px 2px 2px 1px #696969;
+    padding-left: 5%; 
+}
+.btn{
+    margin-top: 2em;
+    margin-left: 5%;
+}
