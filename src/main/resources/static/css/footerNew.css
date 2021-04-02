@@ -1,0 +1,26 @@
+.footerNew{
+    position: fixed;
+    bottom: 0;
+    justify-content: flex-end;
+    background-color:#000000;
+    width: 100%;
+    padding-right: 2%;
+
+}
+.pFooter{
+    display: inline;
+    float: right;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: .5em;
+    color: #FFFFFF;
+    font-size: 1.2em;;	
+}
+.icon-midias-sociais{
+    display: inline;
+    float: right;
+    height: 2em;
+    width: 2.5em;
+    padding-top: .3em;
+    padding-right: .5em;
+}

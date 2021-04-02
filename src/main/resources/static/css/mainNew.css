@@ -4,7 +4,7 @@
 .wrapperMain{
     display: grid;
     grid-template-columns: 15% 85%;
-    height: 86vh;
+    height: 90vh;
 }
 .boxMenu{
     grid-column-start: 1;
