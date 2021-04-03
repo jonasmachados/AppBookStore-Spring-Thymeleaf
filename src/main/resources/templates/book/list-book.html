@@ -14,7 +14,7 @@
         <div class="categories container" layout:fragment="content">
             <div class="divBt">
                 <a href="/edit" class="btn btn-dark btn-lg divBt">
-                    Add Category</a>
+                    Add Book</a>
             </div>
             <div>
                 <h2 class="h2Categories">List of Books</h2>
@@ -24,13 +24,17 @@
                             <th class="thTable">Id</th>
                             <th class="thTable">Title</th>
                             <th class="thTable">Author Name</th>
+                            <th class="thTable">Text</th>
+                            <th class="thTable">Category</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr th:each="book : ${books}">
-                            <td th:text="${book.id}">id</td>
-                            <td th:text="${book.title}">name</td>
-                            <td th:text="${book.authorName}">Description</td>
+                            <td th:text="${book.id}"></td>
+                            <td th:text="${book.title}"></td>
+                            <td th:text="${book.authorName}"></td>
+                            <td th:text="${book.text}"></td>
+                            <td th:text="${book.category.name}"></td>
                             <td>
                                 <a th:href="@{/edit/{id}(id=${book.id})}" class="btn btn-dark">
                                     <i class="fas fa-user-edit ml-2"></i>
