@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>All Employees</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    </head>
+
+    <body>
+        <div class="categories container" layout:fragment="content">
+            <div class="divBt">
+                <a href="/edit" class="btn btn-dark btn-lg divBt">
+                    Add Category</a>
+            </div>
+            <div>
+                <h2 class="h2Categories">List of Books</h2>
+                <table class="table table-striped table-bordered table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="thTable">Id</th>
+                            <th class="thTable">Title</th>
+                            <th class="thTable">Author Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="book : ${books}">
+                            <td th:text="${book.id}">id</td>
+                            <td th:text="${book.title}">name</td>
+                            <td th:text="${book.authorName}">Description</td>
+                            <td>
+                                <a th:href="@{/edit/{id}(id=${book.id})}" class="btn btn-dark">
+                                    <i class="fas fa-user-edit ml-2"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a th:href="@{/delete/{id}(id=${book.id})}" class="btn btn-dark">
+                                    <i class="fas fa-user-times ml-2"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
