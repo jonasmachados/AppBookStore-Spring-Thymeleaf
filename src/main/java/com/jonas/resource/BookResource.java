@@ -47,4 +47,12 @@ public class BookResource {
         service.createOrUpdateBook(book);
         return "redirect:/books"; //REDIRECT: back to previous HTML.
     }
+    
+    @RequestMapping(path = "/deleteBook/{id}")
+    public String deleteBookById(Model model, @PathVariable("id") Integer id)
+            throws RecordNotFoundException {
+        service.deleteBookById(id);
+        return "redirect:/books"; //REDIRECT: back to previous HTML.
+    }
+      
 }

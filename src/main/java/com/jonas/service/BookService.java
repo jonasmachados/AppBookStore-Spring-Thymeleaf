@@ -1,6 +1,7 @@
 package com.jonas.service;
 
 import com.jonas.domain.Book;
+import com.jonas.domain.Category;
 import com.jonas.exception.RecordNotFoundException;
 import com.jonas.repositories.BookRepository;
 import java.util.ArrayList;
@@ -39,8 +40,8 @@ public class BookService {
             throw new RecordNotFoundException("No category record exist for given id");
         }
     }
-    
-     public Book createOrUpdateBook(Book entity) {
+
+    public Book createOrUpdateBook(Book entity) {
         if (entity.getId() == null) {
             entity = repository.save(entity);
 
@@ -53,7 +54,7 @@ public class BookService {
                 newBook.setTitle(entity.getTitle());
                 newBook.setAuthorName(entity.getAuthorName());
                 newBook.setText(entity.getText());
-                newBook.setCategory(entity.getCategory());     
+                newBook.setCategory(entity.getCategory());
 
                 newBook = repository.save(newBook);
 
@@ -63,6 +64,16 @@ public class BookService {
 
                 return entity;
             }
+        }
+    }
+
+    public void deleteBookById(Integer id) throws RecordNotFoundException {
+        Optional<Book> book = repository.findById(id);
+
+        if (book.isPresent()) {
+            repository.deleteById(id);
+        } else {
+            throw new RecordNotFoundException("No book record exist for given id");
         }
     }
 }
