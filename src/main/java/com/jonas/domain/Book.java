@@ -105,8 +105,8 @@ public class Book implements Serializable {
         return category;
     }
 
-    public void setCategory(Category categories) {
-        this.category = categories;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
 }

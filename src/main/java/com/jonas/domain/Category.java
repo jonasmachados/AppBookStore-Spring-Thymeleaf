@@ -105,6 +105,12 @@ public class Category implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+    
+    
     
 
 }

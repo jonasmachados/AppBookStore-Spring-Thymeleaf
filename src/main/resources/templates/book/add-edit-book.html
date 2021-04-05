@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Add Books</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    </head>
+
+    <body>
+        <div class="categories container" layout:fragment="content">
+            <div class="boxPrincipal">
+                <h3 class="h3Categories"> Register of Books</h3>
+
+                <div class="boxLogin">
+                    <form action="#" th:action="@{/createBook}" th:object="${book}" method="post">
+
+                        <div>
+                            <label for="title"></label> 
+                            <input type="text" th:field="*{title}" class="form" id="name" placeholder="Title" />
+                        </div>
+                        <div>
+                            <label for="authorName"></label> 
+                            <input type="text" th:field="*{authorName}" class="form" id="description" placeholder="Author Name" />
+                        </div>
+                        <div>
+                            <label for="text"></label> 
+                            <input type="text" th:field="*{text}" class="form" id="description" placeholder="Text" />
+                        </div>
+                        
+                        <div>
+                            <label for="category.id"></label> 
+                            <input type="text" th:field="*{category.id}" class="form" id="description" placeholder="Id of Category" />
+                        </div>
+                        
+                        <div>
+                            <input type="submit" class="btn btn-dark btn-lg" value=" Submit ">
+                        </div>
+
+
+                        <input type="hidden" id="id" th:field="*{id}">  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
