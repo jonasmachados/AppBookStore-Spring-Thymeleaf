@@ -29,13 +29,12 @@
                         <div>
                             <label for="text"></label> 
                             <input type="text" th:field="*{text}" class="form" id="description" placeholder="Text" />
-                        </div>
-                        
+                        </div>  
                         <div>
-                            <label for="category.id"></label> 
-                            <input type="text" th:field="*{category.id}" class="form" id="description" placeholder="Id of Category" />
+                            <select th:field="*{category.id}">
+                                <option th:each="category : ${listCategory}" th:value="${category.id}" th:text="${category.name}" />
+                            </select>
                         </div>
-                        
                         <div>
                             <input type="submit" class="btn btn-dark btn-lg" value=" Submit ">
                         </div>

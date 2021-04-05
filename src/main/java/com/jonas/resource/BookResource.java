@@ -1,8 +1,10 @@
 package com.jonas.resource;
 
 import com.jonas.domain.Book;
+import com.jonas.domain.Category;
 import com.jonas.exception.RecordNotFoundException;
 import com.jonas.service.BookService;
+import com.jonas.service.CategoryService;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,8 +38,14 @@ public class BookResource {
         if (id.isPresent()) {
             Book entity = service.getBookById(id.get());
             model.addAttribute("book", entity);
+
+            List<Category> listCategory = service.findAllCategory();
+            model.addAttribute("listCategory", listCategory);
         } else {
             model.addAttribute("book", new Book());
+
+            List<Category> listCategory = service.findAllCategory();
+            model.addAttribute("listCategory", listCategory);
         }
         return "book/add-edit-book";
     }
@@ -47,12 +55,12 @@ public class BookResource {
         service.createOrUpdateBook(book);
         return "redirect:/books"; //REDIRECT: back to previous HTML.
     }
-    
+
     @RequestMapping(path = "/deleteBook/{id}")
     public String deleteBookById(Model model, @PathVariable("id") Integer id)
             throws RecordNotFoundException {
         service.deleteBookById(id);
         return "redirect:/books"; //REDIRECT: back to previous HTML.
     }
-      
+
 }

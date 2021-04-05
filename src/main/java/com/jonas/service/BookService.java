@@ -4,6 +4,7 @@ import com.jonas.domain.Book;
 import com.jonas.domain.Category;
 import com.jonas.exception.RecordNotFoundException;
 import com.jonas.repositories.BookRepository;
+import com.jonas.repositories.CategoryRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +21,9 @@ public class BookService {
 
     @Autowired
     private BookRepository repository;
+    
+    @Autowired
+    private CategoryRepository repositoryCategory;
 
     public List<Book> findAllBook() {
         List<Book> result = (List<Book>) repository.findAll();
@@ -28,6 +32,16 @@ public class BookService {
             return result;
         } else {
             return new ArrayList<Book>();
+        }
+    }
+    
+     public List<Category> findAllCategory() {
+        List<Category> result = (List<Category>) repositoryCategory.findAll();
+
+        if (result.size() > 0) {
+            return result;
+        } else {
+            return new ArrayList<Category>();
         }
     }
 
