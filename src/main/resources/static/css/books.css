@@ -9,7 +9,7 @@
 }
 .boxLoginBook{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -42,7 +42,10 @@
 .dropdown-books{
     padding-top: 2em;
 }
-.btn-Book{
-    margin-top: 2em;
-    margin-left: 5%;
+.btn{
+   margin-top: 1em;
+    margin-left: 5%;  
+}
+.divBottom{
+    height: 5em;
 }
