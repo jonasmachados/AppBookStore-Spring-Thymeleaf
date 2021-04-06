@@ -1,5 +1,9 @@
+.categories{
+    padding-left: 2%;
+    padding-right: 2%;
+}
 .h2Categories{
-    size: 1.5em;
+    font-size: 2em;
     color: #FFFFFF;
 }
 .thTable{
@@ -9,8 +13,7 @@
     text-align: center;
 }
 .divBt{
-    padding-top: 5em;
-    padding-bottom: 3em;
+    padding-top: 1em;
 }
 .boxPrincipal{
     display: grid;
@@ -18,8 +21,6 @@
     align-items: center;
 }
 .boxLogin{
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,11 +28,11 @@
     border-top:solid .1em;
     border-bottom:solid .1em;
     border-color: #696969;
-    height: 20em;
+    height: 15em;
     width: 40em;
 }
 .h3Categories{
-    padding-top: 5em;
+    padding-top: .5em;
     padding-bottom: 1em;
     size: 1.5em;
     text-align: center;
@@ -39,7 +40,7 @@
 
 }
 .form{
-    height: 4em;
+    height: 3em;
     width: 30em;
     margin-top: 1em;
     border-radius:5px;
@@ -49,7 +50,8 @@
     padding-left: 5%; 
     font-size: 1em;
 }
-.btn{
+
+.bt-subimit{
     margin-top: 2em;
-    margin-left: 5%;
+     padding-left: 5%;
 }

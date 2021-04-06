@@ -30,7 +30,7 @@ public class CategoryResource {
         return "category/list-category";
     }
 
-    @RequestMapping(path = {"/edit", "/edit/{id}"})
+    @RequestMapping(path = {"/edit", "/edit{id}"})
     public String editCategoryById(Model model, @PathVariable("id") Optional<Integer> id)
             throws RecordNotFoundException {
         if (id.isPresent()) {

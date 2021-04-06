@@ -32,17 +32,19 @@ public class BookResource {
         return "book/list-book";
     }
 
-    @RequestMapping(path = {"/editBook", "/editBook/{id}"})
+    @RequestMapping(path = {"/editBook", "/editBook{id}"})
     public String editBookById(Model model, @PathVariable("id") Optional<Integer> id)
             throws RecordNotFoundException {
-        if (id.isPresent()) {
-            Book entity = service.getBookById(id.get());
-            model.addAttribute("book", entity);
+        if (id.isEmpty()) {
+
+            model.addAttribute("book", new Book());
 
             List<Category> listCategory = service.findAllCategory();
             model.addAttribute("listCategory", listCategory);
+
         } else {
-            model.addAttribute("book", new Book());
+            Book entity = service.getBookById(id.get());
+            model.addAttribute("book", entity);
 
             List<Category> listCategory = service.findAllCategory();
             model.addAttribute("listCategory", listCategory);

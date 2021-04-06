@@ -1,5 +1,8 @@
+.divBt-book{
+    padding-top: 1em;
+}
 .h2-Books{
-    size: 1.5em;
+    font-size: 2em;
     color: #FFFFFF;
 }
 .box-Principal-Book{
@@ -8,8 +11,6 @@
     align-items: center;
 }
 .boxLoginBook{
-    width: 100vw;
-    height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -17,19 +18,19 @@
     border-top:solid .1em;
     border-bottom:solid .1em;
     border-color: #696969;
-    height: 30em;
+    height: 25em;
     width: 40em;
 }
 .h3-book{
-    padding-top: 5em;
+    padding-top: .5em;
     padding-bottom: 1em;
-    size: 1.5em;
+    size: 1em;
     text-align: center;
     color: #FFFFFF;
 
 }
 .form-Book{
-    height: 4em;
+    height: 3em;
     width: 30em;
     margin-top: 1em;
     border-radius:5px;
@@ -43,9 +44,13 @@
     padding-top: 2em;
 }
 .btn{
-   margin-top: 1em;
-    margin-left: 5%;  
+    background-color: #696969;
+    color: #FFFFFF;
 }
 .divBottom{
     height: 5em;
+}
+.bt-subimit{
+    margin-top: 2em;
+     padding-left: 5%;
 }
