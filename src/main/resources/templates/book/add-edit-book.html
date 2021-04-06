@@ -11,32 +11,35 @@
     </head>
 
     <body>
-        <div class="categories container" layout:fragment="content">
-            <div class="boxPrincipal">
-                <h3 class="h3Categories"> Register of Books</h3>
+        <div class="books container" layout:fragment="content">
+            <div class="box-Principal-Book">
+                <h3 class="h3-book"> Register of Books</h3>
 
-                <div class="boxLogin">
+                <div class="boxLoginBook">
                     <form action="#" th:action="@{/createBook}" th:object="${book}" method="post">
 
                         <div>
                             <label for="title"></label> 
-                            <input type="text" th:field="*{title}" class="form" id="name" placeholder="Title" />
+                            <input type="text" th:field="*{title}" class="form-Book" id="name" placeholder="Title" />
                         </div>
                         <div>
                             <label for="authorName"></label> 
-                            <input type="text" th:field="*{authorName}" class="form" id="description" placeholder="Author Name" />
+                            <input type="text" th:field="*{authorName}" class="form-Book" id="description" placeholder="Author Name" />
                         </div>
                         <div>
                             <label for="text"></label> 
-                            <input type="text" th:field="*{text}" class="form" id="description" placeholder="Text" />
+                            <input type="text" th:field="*{text}" class="form-Book" id="description" placeholder="Text" />
                         </div>  
-                        <div>
-                            <select th:field="*{category.id}">
+                        
+                        <div class="dropdown-books">
+                            <select class="form-control form-control-lg" th:field="*{category}" >
+                                <option value="" selected="selected">-- Select a Category --</option>
                                 <option th:each="category : ${listCategory}" th:value="${category.id}" th:text="${category.name}" />
                             </select>
                         </div>
+                        
                         <div>
-                            <input type="submit" class="btn btn-dark btn-lg" value=" Submit ">
+                            <input type="submit" class="btn-Book btn-dark btn-lg" value=" Submit ">
                         </div>
 
 
