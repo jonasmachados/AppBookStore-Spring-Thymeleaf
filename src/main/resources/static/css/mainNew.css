@@ -1,6 +1,11 @@
 .mainNew{
 
 }
+.nav-Main{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
 .wrapperMain{
     display: grid;
     grid-template-columns: 15% 85%;
@@ -37,9 +42,52 @@
     width: 2em;
 }
 
-@media(max-width:900px){
+@media(max-width:800px){
     .wrapperMain{
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 100%;
     }
+    .boxMenu{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        background-color: #696969;
+    }
+    .boxContents{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: #BEBEBE;
+    }
+    label[for=”bt_menu”] {
+        display: block;
+    }
+
+    #bt_menu:checked ~ .boxMenu{
+        margin-left: 0;
+    }
+
+    .boxMenu{
+        padding-left: 10%;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+
+    .boxMenu ul li {
+        padding-left: 5%;
+        width: 100%;
+        float: none;
+    }
+
+    .boxMenu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 4s;
+    }
+
+    .boxMenu ul li:hover ul {
+        height: auto;
+        max-height: 200px;
+    }
+
 }
+

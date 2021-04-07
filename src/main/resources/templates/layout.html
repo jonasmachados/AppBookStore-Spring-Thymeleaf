@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/footerNew.css">
         <link rel="stylesheet" href="css/mainNew.css">
         <link rel="stylesheet" href="css/categories.css">
-         <link rel="stylesheet" href="css/books.css">
+        <link rel="stylesheet" href="css/books.css">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -29,7 +29,9 @@
     <body>
         <div>
             <div class="wrapperMain">
-                <div class="Box boxMenu">
+                <div class="Box boxMenu">                   
+                        <input class="nav-Main" type="checkbox" id="bt_menu" />
+                        <label class="nav-Main" for="bt_menu">&#9776;</label>
                     <ul>
                         <li>
                             <a class="listMenu" th:href="@{/}">
@@ -37,19 +39,22 @@
                                 <p class="pMain">Home</p>
 
                             </a>
+                            <ul>
+                                <li>
+                                    <a class="listMenu" th:href="@{/categories}" >
+                                        <img class="bookIconButton"src="img/category.png" alt="book-Icon">
+                                        <p class="pMain">Category</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="listMenu" th:href="@{/books}" >
+                                        <img class="bookIconButton"src="img/book.png" alt="book-Icon">
+                                        <p class="pMain">Books</p>
+                                    </a>
+                                </li>
+                            </ul> 
                         </li>
-                        <li>
-                            <a class="listMenu" th:href="@{/categories}" >
-                                <img class="bookIconButton"src="img/category.png" alt="book-Icon">
-                                <p class="pMain">Category</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="listMenu" th:href="@{/books}" >
-                                <img class="bookIconButton"src="img/book.png" alt="book-Icon">
-                                <p class="pMain">Books</p>
-                            </a>
-                        </li>
+
                     </ul>  
                 </div>
 
