@@ -29,33 +29,25 @@
     <body>
         <div>
             <div class="wrapperMain">
-                <div class="Box boxMenu">                   
-                        <input class="nav-Main" type="checkbox" id="bt_menu" />
-                        <label class="nav-Main" for="bt_menu">&#9776;</label>
-                    <ul>
-                        <li>
+                <div class="Box boxMenu">                    
+                    <ul class="ul-menu">
+                        <li class="li-main">
                             <a class="listMenu" th:href="@{/}">
                                 <img class="bookIconButton"src="img/home.png" alt="book-Icon"> 
-                                <p class="pMain">Home</p>
-
-                            </a>
-                            <ul>
-                                <li>
-                                    <a class="listMenu" th:href="@{/categories}" >
-                                        <img class="bookIconButton"src="img/category.png" alt="book-Icon">
-                                        <p class="pMain">Category</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="listMenu" th:href="@{/books}" >
-                                        <img class="bookIconButton"src="img/book.png" alt="book-Icon">
-                                        <p class="pMain">Books</p>
-                                    </a>
-                                </li>
-                            </ul> 
+                                <p class="pMain">Home</p></a>
                         </li>
+                        <li class="li-main">
+                            <a class="listMenu" th:href="@{/categories}" >
+                                <img class="bookIconButton"src="img/category.png" alt="book-Icon">
+                                <p class="pMain">Category</p></a>
+                        </li>
+                        <li class="li-main">
+                            <a class="listMenu" th:href="@{/books}" >
+                                <img class="bookIconButton"src="img/book.png" alt="book-Icon">
+                                <p class="pMain">Books</p></a>
+                        </li>
+                    </ul> 
 
-                    </ul>  
                 </div>
 
                 <div class="Box boxContents">

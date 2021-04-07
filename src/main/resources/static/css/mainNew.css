@@ -1,11 +1,6 @@
 .mainNew{
 
 }
-.nav-Main{
-    opacity: 0;
-    height: 0;
-    width: 0;
-}
 .wrapperMain{
     display: grid;
     grid-template-columns: 15% 85%;
@@ -41,7 +36,6 @@
     height: 2em;
     width: 2em;
 }
-
 @media(max-width:800px){
     .wrapperMain{
         display: grid;
@@ -50,44 +44,48 @@
     .boxMenu{
         grid-column-start: 1;
         grid-column-end: 1;
-        background-color: #696969;
+        grid-row-start: 1;
+        grid-row-end: 1;   
+        height: 3.5em;
     }
+
     .boxContents{
         grid-column-start: 1;
-        grid-column-end: 2;
-        background-color: #BEBEBE;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        height: 84vh;
     }
-    label[for=”bt_menu”] {
+    .bookIconButton{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+    .ul-main {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;       
+        margin-left: 10em;
+    }
+
+    .li-main {
+        float: left;
+    }
+
+    .li-main a {
         display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        height: 3.5em;
+
     }
 
-    #bt_menu:checked ~ .boxMenu{
-        margin-left: 0;
+    .li-main a:hover {
+        background-color: #111111;       
     }
-
-    .boxMenu{
-        padding-left: 10%;
-        margin-left: -100%;
-        transition: all .4s;
+    .pMain{
+        padding-top: 0;
     }
-
-    .boxMenu ul li {
-        padding-left: 5%;
-        width: 100%;
-        float: none;
-    }
-
-    .boxMenu ul ul {
-        position: static;
-        overflow: hidden;
-        max-height: 0;
-        transition: all 4s;
-    }
-
-    .boxMenu ul li:hover ul {
-        height: auto;
-        max-height: 200px;
-    }
-
 }
-
