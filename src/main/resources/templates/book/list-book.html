@@ -37,8 +37,8 @@
                         <tr>
                             <th class="thTable">Id</th>
                             <th class="thTable">Title</th>
-                            <th class="thTable">Author Name</th>
-                            <th class="thTable">Text</th>
+                            <th class="thTable th-book">Author Name</th>
+                            <th class="thTable th-book">Text</th>
                             <th class="thTable">Category</th>
                         </tr>
                     </thead>
@@ -46,8 +46,8 @@
                         <tr th:each="book : ${books}">
                             <td th:text="${book.id}"></td>
                             <td th:text="${book.title}"></td>
-                            <td th:text="${book.authorName}"></td>
-                            <td th:text="${book.text}"></td>
+                            <td class="th-book" th:text="${book.authorName}"></td>
+                            <td class="th-book" th:text="${book.text}"></td>
                             <td th:text="${book.category.name}"></td>
                             <td>
                                 <a th:href="@{/editBook{id}(id=${book.id})}" class="btn btn-dark">

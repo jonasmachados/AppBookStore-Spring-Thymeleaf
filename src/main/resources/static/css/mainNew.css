@@ -36,10 +36,11 @@
     height: 2em;
     width: 2em;
 }
-@media(max-width:800px){
+@media(max-width:980px){
     .wrapperMain{
         display: grid;
         grid-template-columns: 100%;
+        position: inherit;
     }
     .boxMenu{
         grid-column-start: 1;
@@ -54,7 +55,7 @@
         grid-column-end: 1;
         grid-row-start: 2;
         grid-row-end: 2;
-        height: 84vh;
+        height: 126vh;
     }
     .bookIconButton{
         opacity: 0;
