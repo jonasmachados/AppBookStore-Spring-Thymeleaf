@@ -52,12 +52,23 @@
 }
 .bt-subimit{
     margin-top: 2em;
-     padding-left: 5%;
+    padding-left: 5%;
 }
 
 @media(max-width:800px){
     .th-book{
         display:none;
+    }
+    .boxLoginBook{
+        width: 20em;
+        height: 26em;
+    }
+    .form-Book{
+        width: 20em;
+
+    }
+    .bt-subimit{
+        margin-top: 1em;
     }
 }
 
