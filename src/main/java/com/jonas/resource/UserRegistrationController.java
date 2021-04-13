@@ -1,6 +1,6 @@
 package com.jonas.resource;
 
-import com.jonas.domain.User;
+import com.jonas.domain.UserEntity;
 import com.jonas.dto.UserRegistrationDto;
 import com.jonas.service.UserService;
 import javax.validation.Valid;
@@ -22,7 +22,7 @@ public class UserRegistrationController {
     @Autowired
     private UserService userService;
 
-    @ModelAttribute("user")
+    @ModelAttribute("userEntity")
     public UserRegistrationDto userRegistrationDto() {
         return new UserRegistrationDto();
     }
@@ -33,10 +33,10 @@ public class UserRegistrationController {
     }
 
     @PostMapping
-    public String registerUserAccount(@ModelAttribute("user") @Valid UserRegistrationDto userDto,
+    public String registerUserAccount(@ModelAttribute("userEntity") @Valid UserRegistrationDto userDto,
                                       BindingResult result){
 
-        User existing = userService.findByEmail(userDto.getEmail());
+        UserEntity existing = userService.findByEmail(userDto.getEmail());
         if (existing != null){
             result.rejectValue("email", null, "There is already an account registered with that email");
         }

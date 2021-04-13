@@ -17,7 +17,7 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/user")
+    @GetMapping("/userEntity")
     public String userIndex() {
         return "index";
     }

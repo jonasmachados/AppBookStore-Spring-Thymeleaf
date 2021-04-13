@@ -1,7 +1,7 @@
 package com.jonas.service;
 
 import com.jonas.domain.Role;
-import com.jonas.domain.User;
+import com.jonas.domain.UserEntity;
 import com.jonas.dto.UserRegistrationDto;
 import com.jonas.repositories.UserRepository;
 import java.util.Arrays;
@@ -32,28 +32,28 @@ public class UserService implements UserDetailsService{
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    public User findByEmail(String email){
+    public UserEntity findByEmail(String email){
         return userRepository.findByEmail(email);
     }
 
-    public User save(UserRegistrationDto registration){
-        User user = new User();
-        user.setFirstName(registration.getFirstName());
-        user.setLastName(registration.getLastName());
-        user.setEmail(registration.getEmail());
-        user.setPassword(passwordEncoder.encode(registration.getPassword()));
-        user.setRoles(Arrays.asList(new Role("ROLE_USER")));
-        return userRepository.save(user);
+    public UserEntity save(UserRegistrationDto registration){
+        UserEntity users = new UserEntity();
+        users.setFirstName(registration.getFirstName());
+        users.setLastName(registration.getLastName());
+        users.setEmail(registration.getEmail());
+        users.setPassword(passwordEncoder.encode(registration.getPassword()));
+        users.setRoles(Arrays.asList(new Role("ROLE_USER")));
+        return userRepository.save(users);
     }
 
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = userRepository.findByEmail(email);
-        if (user == null){
+        UserEntity users = userRepository.findByEmail(email);
+        if (users == null){
             throw new UsernameNotFoundException("Invalid username or password.");
         }
-        return new org.springframework.security.core.userdetails.User(user.getEmail(),
-                user.getPassword(),
-                mapRolesToAuthorities(user.getRoles()));
+        return new org.springframework.security.core.userdetails.User(users.getEmail(),
+                users.getPassword(),
+                mapRolesToAuthorities(users.getRoles()));
     }
 
     private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Collection<Role> roles){
