@@ -24,7 +24,11 @@
     <header class="headerNew">
         <img class="bookIcon" src="img/book-icon.ico" 
              alt="book-Icon">
-        <h1 class="h1Header">BOOKSTORE APPLICATION</h1>           
+        <h1 class="h1Header">BOOKSTORE APPLICATION</h1>  
+        <form class="form-inline my-2 my-lg-0 formLogout" form-method="post" th:action="@{/logout}">
+            <button sec:authorize="isAuthenticated()" class="btn btn-outline-danger my-2 my-sm-0 btn-sm" type="submit">Logout</button>
+            <button sec:authorize="isAnonymous()" th:href="@{~/login}" class="btn btn-outline-info my-2 my-sm-0 btn-sm" type="submit">Login</button>
+        </form>
     </header>
 
     <body>
